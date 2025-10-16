@@ -19,6 +19,10 @@ class _BodyOfSplashViewState
   @override
   void initState() {
     super.initState();
+    initSlidingAnimation();
+  }
+
+  void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
