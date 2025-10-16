@@ -1,8 +1,33 @@
 import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class BodyOfSplashView extends StatelessWidget {
+class BodyOfSplashView extends StatefulWidget {
   const BodyOfSplashView({super.key});
+
+  @override
+  State<BodyOfSplashView> createState() =>
+      _BodyOfSplashViewState();
+}
+
+class _BodyOfSplashViewState
+    extends State<BodyOfSplashView>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> slideAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    slideAnimation = Tween<Offset>(
+      begin: Offset(0, 5),
+      end: Offset.zero,
+    ).animate(animationController);
+    animationController.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +37,22 @@ class BodyOfSplashView extends StatelessWidget {
           CrossAxisAlignment.stretch,
       children: [
         Image.asset(MyAssets.booklyLogo),
-        const Center(
-          child: Text(
-            'Read Free Books',
-            style: TextStyle(
-              fontFamily: MyAssets.kPrimaryFont,
-              fontSize: 18,
-            ),
+        Center(
+          child: AnimatedBuilder(
+            animation: slideAnimation,
+            builder: (context, widget) {
+              return SlideTransition(
+                position: slideAnimation,
+                child: const Text(
+                  'Read Free Books',
+                  style: TextStyle(
+                    fontFamily:
+                        MyAssets.kPrimaryFont,
+                    fontSize: 18,
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ],
