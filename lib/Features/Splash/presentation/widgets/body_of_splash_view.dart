@@ -1,4 +1,5 @@
 import 'package:bookly/Core/utils/constants.dart';
+import 'package:bookly/Features/Splash/presentation/widgets/slide_animation_text.dart';
 import 'package:flutter/material.dart';
 
 class BodyOfSplashView extends StatefulWidget {
@@ -37,23 +38,8 @@ class _BodyOfSplashViewState
           CrossAxisAlignment.stretch,
       children: [
         Image.asset(MyAssets.booklyLogo),
-        Center(
-          child: AnimatedBuilder(
-            animation: slideAnimation,
-            builder: (context, widget) {
-              return SlideTransition(
-                position: slideAnimation,
-                child: const Text(
-                  'Read Free Books',
-                  style: TextStyle(
-                    fontFamily:
-                        MyAssets.kPrimaryFont,
-                    fontSize: 18,
-                  ),
-                ),
-              );
-            },
-          ),
+        SlideAnimationText(
+          slideAnimation: slideAnimation,
         ),
       ],
     );
