@@ -13,6 +13,8 @@ class MyColors {
 class MyAssets {
   static const booklyLogo =
       'assets/images/Logo.png';
+  static const testImage =
+      'assets/images/GOAT.jpg';
   static const kPrimaryFont =
       'GT Sectra Fine Regular';
 }
