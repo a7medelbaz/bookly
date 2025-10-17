@@ -1,5 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
+class MyConstants {
+  static const kTransitionDuration = Duration(
+    seconds: 1,
+  );
+}
+
 class MyColors {
   static const kPrimaryColor = Color(0xff100B20);
 }
