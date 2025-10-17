@@ -49,7 +49,7 @@ class _BodyOfSplashViewState
     return Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.to(
+        Get.off(
           () => HomeView(),
           transition:
               Transition.rightToLeftWithFade,
