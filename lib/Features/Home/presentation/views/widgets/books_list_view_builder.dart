@@ -1,4 +1,4 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/custom_books_list_view.dart';
+import 'package:bookly/Features/Home/presentation/views/widgets/custom_book_card.dart';
 import 'package:flutter/material.dart';
 
 class BooksListViewBuilder
@@ -14,7 +14,7 @@ class BooksListViewBuilder
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) {
-          return CustomBooksListView();
+          return CustomBookCard();
         },
       ),
     );
