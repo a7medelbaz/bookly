@@ -20,6 +20,7 @@ class _BodyOfSplashViewState
   void initState() {
     super.initState();
     initSlidingAnimation();
+    Future.delayed(Duration(seconds: 30));
   }
 
   @override
