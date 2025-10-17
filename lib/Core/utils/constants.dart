@@ -1,0 +1,20 @@
+import 'package:flutter/cupertino.dart';
+
+class MyConstants {
+  static const kTransitionDuration = Duration(
+    seconds: 1,
+  );
+}
+
+class MyColors {
+  static const kPrimaryColor = Color(0xff100B20);
+}
+
+class MyAssets {
+  static const booklyLogo =
+      'assets/images/Logo.png';
+  static const testImage =
+      'assets/images/GOAT.jpg';
+  static const kPrimaryFont =
+      'GT Sectra Fine Regular';
+}
