@@ -1,17 +1,18 @@
 import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomBooksListView
+class CustomBookCard
     extends StatelessWidget {
-  const CustomBooksListView({super.key});
+  const CustomBookCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height:
-          MediaQuery.of(context).size.height * .3,
-      child: AspectRatio(
-        aspectRatio: 2.7 / 4,
+    return AspectRatio(
+      aspectRatio: 3 / 4,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 15.0,
+        ),
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -21,7 +22,7 @@ class CustomBooksListView
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(
-              18,
+              20,
             ),
           ),
         ),
