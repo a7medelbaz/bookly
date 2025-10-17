@@ -1,5 +1,5 @@
 import 'package:bookly/Core/utils/constants.dart';
-import 'package:bookly/Features/Splash/presentation/widgets/slide_animation_text.dart';
+import 'package:bookly/Features/Splash/presentation/views/widgets/slide_animation_text.dart';
 import 'package:flutter/material.dart';
 
 class BodyOfSplashView extends StatefulWidget {
@@ -20,6 +20,12 @@ class _BodyOfSplashViewState
   void initState() {
     super.initState();
     initSlidingAnimation();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 
   void initSlidingAnimation() {
