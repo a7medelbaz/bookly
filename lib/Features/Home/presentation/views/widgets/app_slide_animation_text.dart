@@ -1,6 +1,5 @@
+import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../Core/utils/constants.dart';
 
 class AppSlideAnimationText
     extends StatelessWidget {
@@ -22,10 +21,7 @@ class AppSlideAnimationText
           position: slideAnimation,
           child: Text(
             text,
-            style: TextStyle(
-              fontFamily: MyAssets.kPrimaryFont,
-              fontSize: 18,
-            ),
+            style: MyStyles.appSlideAnimationText
           ),
         );
       },

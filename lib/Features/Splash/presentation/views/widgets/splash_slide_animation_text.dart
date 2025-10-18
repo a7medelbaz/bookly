@@ -1,8 +1,8 @@
+import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../Core/utils/constants.dart';
-
-class SplashSlideAnimationText extends StatelessWidget {
+class SplashSlideAnimationText
+    extends StatelessWidget {
   const SplashSlideAnimationText({
     super.key,
     required this.slideAnimation,
@@ -20,10 +20,7 @@ class SplashSlideAnimationText extends StatelessWidget {
             position: slideAnimation,
             child: Text(
               'Read Free Books',
-              style: TextStyle(
-                fontFamily: MyAssets.kPrimaryFont,
-                fontSize: 18,
-              ),
+              style: MyStyles.splashTextStyle,
             ),
           );
         },
