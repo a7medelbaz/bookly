@@ -1,5 +1,6 @@
-import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../Core/utils/constants.dart';
 
 class SplashSlideAnimationText extends StatelessWidget {
   const SplashSlideAnimationText({

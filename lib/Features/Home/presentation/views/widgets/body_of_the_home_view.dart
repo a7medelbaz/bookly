@@ -1,6 +1,6 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/books_list_view_builder.dart';
-import 'package:bookly/Features/Home/presentation/views/widgets/custom_abb_bar.dart';
-import 'package:bookly/Features/Home/presentation/views/widgets/app_slide_animation_text.dart';
+import 'books_list_view_builder.dart';
+import 'custom_abb_bar.dart';
+import 'app_slide_animation_text.dart';
 import 'package:flutter/material.dart';
 
 class BodyOfTheHomeView extends StatefulWidget {
