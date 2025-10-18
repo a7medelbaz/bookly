@@ -1,3 +1,5 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/best_seller_book_card.dart';
+
 import 'books_list_view_builder.dart';
 import 'custom_abb_bar.dart';
 import 'app_slide_animation_text.dart';
@@ -57,6 +59,8 @@ class _BodyOfTheHomeViewState
           slideAnimation: slideAnimation,
           text: 'Best Sellers',
         ),
+        SizedBox(height: 10),
+        BestSellerBookCard(),
       ],
     );
   }
