@@ -51,15 +51,11 @@ class _BodyOfTheHomeViewState
         SizedBox(height: 40),
         BooksListViewBuilder(),
         SizedBox(height: 40),
-        Padding(
+        AppSlideAnimationText(
           padding: EdgeInsets.only(left: 15.0),
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: AppSlideAnimationText(
-              slideAnimation: slideAnimation,
-              text: 'Best Sellers',
-            ),
-          ),
+          alignment: Alignment.topLeft,
+          slideAnimation: slideAnimation,
+          text: 'Best Sellers',
         ),
       ],
     );

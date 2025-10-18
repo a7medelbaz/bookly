@@ -7,10 +7,14 @@ class AppSlideAnimationText
     super.key,
     required this.slideAnimation,
     required this.text,
+    required this.alignment,
+    required this.padding,
   });
 
   final Animation<Offset> slideAnimation;
   final String text;
+  final AlignmentGeometry alignment;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +23,16 @@ class AppSlideAnimationText
       builder: (context, widget) {
         return SlideTransition(
           position: slideAnimation,
-          child: Text(
-            text,
-            style: MyStyles.appSlideAnimationText
+          child: Padding(
+            padding: padding,
+            child: Align(
+              alignment: alignment,
+              child: Text(
+                text,
+                style: MyStyles
+                    .appSlideAnimationText,
+              ),
+            ),
           ),
         );
       },
