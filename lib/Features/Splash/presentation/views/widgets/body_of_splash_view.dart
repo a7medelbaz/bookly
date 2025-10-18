@@ -1,6 +1,6 @@
 import 'package:bookly/Core/utils/constants.dart';
 import 'package:bookly/Features/Home/presentation/views/home_view.dart';
-import 'package:bookly/Features/Splash/presentation/views/widgets/slide_animation_text.dart';
+import 'package:bookly/Features/Splash/presentation/views/widgets/splash_slide_animation_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -68,7 +68,7 @@ class _BodyOfSplashViewState
           CrossAxisAlignment.stretch,
       children: [
         Image.asset(MyAssets.booklyLogo),
-        SlideAnimationText(
+        SplashSlideAnimationText(
           slideAnimation: slideAnimation,
         ),
       ],
