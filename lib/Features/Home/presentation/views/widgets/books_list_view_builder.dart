@@ -14,7 +14,10 @@ class BooksListViewBuilder
         scrollDirection: Axis.horizontal,
         itemCount: 4,
         itemBuilder: (context, index) {
-          return CustomBookCard();
+          return CustomBookCard(
+            borderCircularRadius: 20,
+            aspectRatio: 3 / 4,
+          );
         },
       ),
     );
