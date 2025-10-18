@@ -8,7 +8,6 @@ abstract class MyStyles {
     fontSize: 18,
   );
   static const appSlideAnimationText = TextStyle(
-    fontFamily: MyAssets.kPrimaryFont,
     fontWeight: FontWeight.w600,
     fontSize: 18,
   );
