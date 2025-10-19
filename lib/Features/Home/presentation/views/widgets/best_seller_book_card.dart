@@ -1,4 +1,4 @@
-import 'book_name_and_auther.dart';
+import 'book_deteils_card.dart';
 import 'custom_book_card.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +10,11 @@ class BestSellerBookCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         left: 30.0,
-        right: 51,
+        right: 30,
         bottom: 20,
       ),
       child: SizedBox(
-        height: 125,
+        height: 115,
         child: Row(
           children: [
             CustomBookCard(
@@ -23,7 +23,7 @@ class BestSellerBookCard extends StatelessWidget {
               borderCircularRadius: 8,
             ),
             SizedBox(width: 30),
-            BookNameAndAuther(),
+            BookDeteilsCard(),
           ],
         ),
       ),
