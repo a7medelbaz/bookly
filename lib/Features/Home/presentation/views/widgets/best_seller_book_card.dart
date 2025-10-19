@@ -11,6 +11,7 @@ class BestSellerBookCard extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 30.0,
         right: 51,
+        bottom: 20,
       ),
       child: SizedBox(
         height: 125,
@@ -18,7 +19,7 @@ class BestSellerBookCard extends StatelessWidget {
           children: [
             CustomBookCard(
               horizontalPadding: 0,
-              aspectRatio: 2.8 / 4,
+              aspectRatio: 2.6 / 4,
               borderCircularRadius: 8,
             ),
             SizedBox(width: 30),
