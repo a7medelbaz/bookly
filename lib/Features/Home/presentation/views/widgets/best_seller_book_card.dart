@@ -7,17 +7,24 @@ class BestSellerBookCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 125,
-      child: Row(
-        children: [
-          CustomBookCard(
-            aspectRatio: 3.3 / 4,
-            borderCircularRadius: 8,
-          ),
-          SizedBox(width: 10),
-          BookNameAndAuther(),
-        ],
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 30.0,
+        right: 51,
+      ),
+      child: SizedBox(
+        height: 125,
+        child: Row(
+          children: [
+            CustomBookCard(
+              horizontalPadding: 0,
+              aspectRatio: 2.8 / 4,
+              borderCircularRadius: 8,
+            ),
+            SizedBox(width: 30),
+            BookNameAndAuther(),
+          ],
+        ),
       ),
     );
   }
