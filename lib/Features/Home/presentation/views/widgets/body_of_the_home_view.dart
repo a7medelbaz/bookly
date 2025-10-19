@@ -62,7 +62,6 @@ class _BodyOfTheHomeViewState
         SizedBox(height: 20),
         BestSellerBookCard(),
         BestSellerBookCard(),
-        BestSellerBookCard(),
       ],
     );
   }
