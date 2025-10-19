@@ -1,8 +1,10 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/book_price_and_rating.dart';
+
 import '../../../../../Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class BookNameAndAuther extends StatelessWidget {
-  const BookNameAndAuther({super.key});
+class BookDeteilsCard extends StatelessWidget {
+  const BookDeteilsCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class BookNameAndAuther extends StatelessWidget {
           'Gorge RR Martin',
           style: MyStyles.textStyle14,
         ),
+        BookPriceAndRating(),
       ],
     );
   }
