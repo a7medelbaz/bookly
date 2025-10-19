@@ -1,5 +1,5 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/book_name_and_auther.dart';
-import 'package:bookly/Features/Home/presentation/views/widgets/custom_book_card.dart';
+import 'book_name_and_auther.dart';
+import 'custom_book_card.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerBookCard extends StatelessWidget {
