@@ -15,6 +15,7 @@ class BooksListViewBuilder
         itemCount: 4,
         itemBuilder: (context, index) {
           return CustomBookCard(
+            horizontalPadding: 15,
             borderCircularRadius: 20,
             aspectRatio: 3 / 4,
           );

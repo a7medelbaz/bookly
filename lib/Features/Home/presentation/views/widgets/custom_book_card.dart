@@ -5,10 +5,12 @@ import '../../../../../Core/utils/constants.dart';
 class CustomBookCard extends StatelessWidget {
   final double aspectRatio;
   final double borderCircularRadius;
+  final double horizontalPadding;
   const CustomBookCard({
     super.key,
     required this.aspectRatio,
     required this.borderCircularRadius,
+    required this.horizontalPadding,
   });
 
   @override
@@ -16,8 +18,8 @@ class CustomBookCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: aspectRatio,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15.0,
+        padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding,
         ),
         child: Container(
           decoration: BoxDecoration(
