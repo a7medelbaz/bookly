@@ -1,3 +1,5 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/best_seller_book_card.dart';
+
 import 'books_list_view_builder.dart';
 import 'custom_abb_bar.dart';
 import 'app_slide_animation_text.dart';
@@ -48,15 +50,17 @@ class _BodyOfTheHomeViewState
     return Column(
       children: [
         CustomAppBar(),
-        SizedBox(height: 40),
+        SizedBox(height: 47),
         BooksListViewBuilder(),
-        SizedBox(height: 40),
+        SizedBox(height: 49),
         AppSlideAnimationText(
-          padding: EdgeInsets.only(left: 15.0),
+          padding: EdgeInsets.only(left: 30.0),
           alignment: Alignment.topLeft,
           slideAnimation: slideAnimation,
           text: 'Best Sellers',
         ),
+        SizedBox(height: 20),
+        BestSellerBookCard(),
       ],
     );
   }
