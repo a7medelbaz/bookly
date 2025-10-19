@@ -1,17 +1,25 @@
-import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomBookCard
-    extends StatelessWidget {
-  const CustomBookCard({super.key});
+import '../../../../../Core/utils/constants.dart';
+
+class CustomBookCard extends StatelessWidget {
+  final double aspectRatio;
+  final double borderCircularRadius;
+  final double horizontalPadding;
+  const CustomBookCard({
+    super.key,
+    required this.aspectRatio,
+    required this.borderCircularRadius,
+    required this.horizontalPadding,
+  });
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 3 / 4,
+      aspectRatio: aspectRatio,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15.0,
+        padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding,
         ),
         child: Container(
           decoration: BoxDecoration(
@@ -22,7 +30,7 @@ class CustomBookCard
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(
-              20,
+              borderCircularRadius,
             ),
           ),
         ),
