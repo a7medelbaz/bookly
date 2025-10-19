@@ -29,8 +29,7 @@ class AppSlideAnimationText
               alignment: alignment,
               child: Text(
                 text,
-                style: MyStyles
-                    .appSlideAnimationText,
+                style: MyStyles.textStyle18,
               ),
             ),
           ),
