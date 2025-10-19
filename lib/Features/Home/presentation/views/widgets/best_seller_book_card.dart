@@ -1,3 +1,4 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/book_name_and_auther.dart';
 import 'package:bookly/Features/Home/presentation/views/widgets/custom_book_card.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,8 @@ class BestSellerBookCard extends StatelessWidget {
             aspectRatio: 3.3 / 4,
             borderCircularRadius: 8,
           ),
+          SizedBox(width: 10),
+          BookNameAndAuther(),
         ],
       ),
     );
