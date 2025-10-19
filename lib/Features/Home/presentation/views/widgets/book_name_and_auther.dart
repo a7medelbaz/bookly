@@ -1,4 +1,4 @@
-import 'package:bookly/Core/utils/styles.dart';
+import '../../../../../Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookNameAndAuther extends StatelessWidget {

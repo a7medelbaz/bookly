@@ -1,6 +1,7 @@
-import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart'
     show TextStyle, FontWeight;
+
+import 'constants.dart';
 
 abstract class MyStyles {
   static const splashTextStyle = TextStyle(
