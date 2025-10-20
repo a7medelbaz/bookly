@@ -13,7 +13,6 @@ class BookPriceAndRating extends StatelessWidget {
           style: MyStyles.textStyle18,
         ),
         Spacer(),
-        // SizedBox(width: 55),
         Row(
           children: [
             Icon(
@@ -21,7 +20,6 @@ class BookPriceAndRating extends StatelessWidget {
               color: Colors.yellow,
               size: 18,
             ),
-            SizedBox(width: 6.3),
             Text(
               '4.8',
               style: MyStyles.textStyle16,
