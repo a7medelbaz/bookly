@@ -12,10 +12,9 @@ class BookPriceAndRating extends StatelessWidget {
           '19.99 €',
           style: MyStyles.textStyle18,
         ),
-        SizedBox(width: 55),
+        Spacer(),
+        // SizedBox(width: 55),
         Row(
-          mainAxisAlignment:
-              MainAxisAlignment.spaceBetween,
           children: [
             Icon(
               Icons.star_rounded,
