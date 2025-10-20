@@ -1,5 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
+abstract class MyRoutes {
+  static const splashViewRoute = '/';
+  static const homeViewRoute = '/homeViewRoute';
+  static const bookDetailsViewRoute = '/bookDetailsViewRoute';
+}
+
 class MyConstants {
   static const kTransitionDuration = Duration(
     seconds: 1,
