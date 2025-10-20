@@ -1,7 +1,6 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/best_seller_book_ailver_list_builder.dart';
 import 'package:flutter/material.dart';
-
 import 'app_slide_animation_text.dart';
-import 'best_seller_book_card.dart';
 import 'books_list_view_builder.dart';
 import 'custom_abb_bar.dart';
 
@@ -47,22 +46,28 @@ class _BodyOfTheHomeViewState
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomAppBar(),
-        SizedBox(height: 47),
-        BooksListViewBuilder(),
-        SizedBox(height: 49),
-        AppSlideAnimationText(
-          padding: EdgeInsets.only(left: 30.0),
-          alignment: Alignment.topLeft,
-          slideAnimation: slideAnimation,
-          text: 'Best Sellers',
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              CustomAppBar(),
+              SizedBox(height: 47),
+              BooksListViewBuilder(),
+              SizedBox(height: 49),
+              AppSlideAnimationText(
+                padding: EdgeInsets.only(
+                  left: 30.0,
+                ),
+                alignment: Alignment.topLeft,
+                slideAnimation: slideAnimation,
+                text: 'Best Sellers',
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
         ),
-        SizedBox(height: 20),
-        BestSellerBookCard(),
-        BestSellerBookCard(),
-        BestSellerBookCard(),
+        BestSellerBookAilverListBuilder(),
       ],
     );
   }
