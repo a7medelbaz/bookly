@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'book_deteils_card.dart';
 import 'custom_book_card.dart';
-import 'package:flutter/material.dart';
 
 class BestSellerBookCard extends StatelessWidget {
   const BestSellerBookCard({super.key});

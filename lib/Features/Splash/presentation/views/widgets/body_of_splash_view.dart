@@ -1,9 +1,7 @@
+import 'package:go_router/go_router.dart';
 import '../../../../../Core/utils/constants.dart';
-import '../../../../Home/presentation/views/home_view.dart';
 import 'splash_slide_animation_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class BodyOfSplashView extends StatefulWidget {
   const BodyOfSplashView({super.key});
@@ -49,13 +47,15 @@ class _BodyOfSplashViewState
     return Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.off(
-          () => HomeView(),
-          transition:
-              Transition.rightToLeftWithFade,
-          duration:
-              MyConstants.kTransitionDuration,
-        );
+        // Get.off(
+        //   () => HomeView(),
+        //   transition:
+        //       Transition.rightToLeftWithFade,
+        //   duration:
+        //       MyConstants.kTransitionDuration,
+        // );
+        // ignore: use_build_context_synchronously
+        GoRouter.of(context).push(MyRoutes.homeViewRoute);
       },
     );
   }

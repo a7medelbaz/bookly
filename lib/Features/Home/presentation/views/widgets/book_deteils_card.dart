@@ -1,7 +1,7 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/book_price_and_rating.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/styles.dart';
-import 'package:flutter/material.dart';
+import 'book_price_and_rating.dart';
 
 class BookDeteilsCard extends StatelessWidget {
   const BookDeteilsCard({super.key});
