@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'best_seller_book_card.dart';
 
-class BestSellerBookAilverListBuilder
+class BestSellerBookSilverListBuilder
     extends StatelessWidget {
-  const BestSellerBookAilverListBuilder({
+  const BestSellerBookSilverListBuilder({
     super.key,
   });
 
