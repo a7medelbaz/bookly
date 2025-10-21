@@ -10,7 +10,8 @@ class BooksListViewBuilder
   Widget build(BuildContext context) {
     return SizedBox(
       height:
-          MediaQuery.of(context).size.height * .3,
+          MediaQuery.of(context).size.height *
+          .28,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 4,
