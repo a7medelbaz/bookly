@@ -15,7 +15,7 @@ class BodyOfBookDetailsView
       children: [
         SizedBox(height: 35),
         CustomBookCard(
-          aspectRatio: 2.7 / 2,
+          aspectRatio: 2.7 / 1.8,
           borderCircularRadius: 18,
           horizontalPadding: width * .25,
         ),
