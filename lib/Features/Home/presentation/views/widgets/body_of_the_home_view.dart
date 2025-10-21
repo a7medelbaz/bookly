@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_slide_animation_text.dart';
-import 'best_seller_book_ailver_list_builder.dart';
+import 'best_seller_book_silver_list_builder.dart';
 import 'books_list_view_builder.dart';
 import 'custom_abb_bar.dart';
 
@@ -68,7 +68,7 @@ class _BodyOfTheHomeViewState
             ],
           ),
         ),
-        BestSellerBookAilverListBuilder(),
+        BestSellerBookSilverListBuilder(),
       ],
     );
   }
