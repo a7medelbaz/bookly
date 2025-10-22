@@ -1,10 +1,10 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/books_recommendations_list.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/styles.dart';
 import 'app_slide_animation_text.dart';
+import 'books_recommendations_list.dart';
 import 'custom_book_card.dart';
 import 'selected_book_details.dart';
-import 'package:flutter/material.dart';
 
 class BodyOfBookDetailsView
     extends StatefulWidget {

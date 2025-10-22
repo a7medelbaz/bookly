@@ -55,8 +55,10 @@ class _BodyOfSplashViewState
         //   duration:
         //       MyConstants.kTransitionDuration,
         // );
-        // ignore: use_build_context_synchronously
-        GoRouter.of(context).push(MyRoutes.homeViewRoute);
+        GoRouter.of(
+          // ignore: use_build_context_synchronously
+          context,
+        ).go(MyRoutes.homeViewRoute);
       },
     );
   }

@@ -5,6 +5,8 @@ abstract class MyRoutes {
   static const homeViewRoute = '/homeViewRoute';
   static const bookDetailsViewRoute =
       '/bookDetailsViewRoute';
+  static const searchViewRoute =
+      '/searchViewRoute';
 }
 
 class MyConstants {

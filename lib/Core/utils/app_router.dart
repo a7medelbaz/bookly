@@ -1,3 +1,4 @@
+import '../../Features/Home/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -25,6 +26,10 @@ abstract class AppRouter {
         path: MyRoutes.bookDetailsViewRoute,
         builder: (context, state) =>
             BookDetailsView(),
+      ),
+      GoRoute(
+        path: MyRoutes.searchViewRoute,
+        builder: (context, state) => SearchView(),
       ),
     ],
   );

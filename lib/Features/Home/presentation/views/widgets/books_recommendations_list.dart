@@ -1,4 +1,4 @@
-import 'package:bookly/Features/Home/presentation/views/widgets/custom_book_card.dart';
+import 'custom_book_card.dart';
 import 'package:flutter/material.dart';
 
 class BooksRecommendationsList

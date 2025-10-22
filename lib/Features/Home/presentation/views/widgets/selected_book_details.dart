@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../Core/utils/constants.dart';
 import '../../../../../Core/utils/styles.dart';
 import 'price_and_review_card.dart';
-import 'package:flutter/material.dart';
 
 class SelectedBookDetails
     extends StatelessWidget {
