@@ -1,6 +1,6 @@
-import 'package:bookly/Core/utils/constants.dart';
-import 'package:bookly/Core/utils/styles.dart';
-import 'package:bookly/Features/Home/presentation/views/widgets/price_and_review_card.dart';
+import '../../../../../Core/utils/constants.dart';
+import '../../../../../Core/utils/styles.dart';
+import 'price_and_review_card.dart';
 import 'package:flutter/material.dart';
 
 class SelectedBookDetails

@@ -1,5 +1,6 @@
-import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../Core/utils/styles.dart';
 
 class PriceAndReviewCard extends StatelessWidget {
   final Color containerColor;
