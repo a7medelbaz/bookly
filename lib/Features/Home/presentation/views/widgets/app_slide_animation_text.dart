@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../Core/utils/styles.dart';
-
 class AppSlideAnimationText
     extends StatelessWidget {
   const AppSlideAnimationText({
@@ -10,10 +8,12 @@ class AppSlideAnimationText
     required this.text,
     required this.alignment,
     required this.padding,
+    required this.textStyle,
   });
 
   final Animation<Offset> slideAnimation;
   final String text;
+  final TextStyle textStyle;
   final AlignmentGeometry alignment;
   final EdgeInsetsGeometry padding;
 
@@ -30,7 +30,7 @@ class AppSlideAnimationText
               alignment: alignment,
               child: Text(
                 text,
-                style: MyStyles.textStyle18,
+                style:textStyle,
               ),
             ),
           ),

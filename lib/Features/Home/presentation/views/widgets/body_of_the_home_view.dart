@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../Core/utils/styles.dart';
 import 'app_slide_animation_text.dart';
 import 'best_seller_book_silver_list_builder.dart';
 import 'books_list_view_builder.dart';
@@ -63,6 +64,7 @@ class _BodyOfTheHomeViewState
                 alignment: Alignment.topLeft,
                 slideAnimation: slideAnimation,
                 text: 'Best Sellers',
+                textStyle: MyStyles.textStyle18,
               ),
               SizedBox(height: 20),
             ],
