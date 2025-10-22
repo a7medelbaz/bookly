@@ -15,13 +15,14 @@ class SelectedBookDetails
     return Column(
       children: [
         Text(
-          'The Songs',
+          'The Songs of the Arabs',
           style: MyStyles.textStyle30,
         ),
         Text(
-          'أبو الفرج الاصفهاني',
+          'Ahmed Elbaz',
           style: MyStyles.textStyle18.copyWith(
-            color: Colors.grey,
+            color: MyColors.autherNameColor,
+            fontStyle: FontStyle.italic,
           ),
         ),
         SizedBox(height: 14),
@@ -36,7 +37,10 @@ class SelectedBookDetails
             ),
             Text(
               '4.8',
-              style: MyStyles.textStyle16,
+              style: MyStyles.textStyle16
+                  .copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             SizedBox(width: 9),
             Text(
@@ -54,7 +58,7 @@ class SelectedBookDetails
                 MainAxisAlignment.spaceEvenly,
             children: [
               PriceAndReviewCard(
-                containerText: '200 \$',
+                containerText: '199.99 \$',
                 containerColor:
                     MyColors.priceContainerColor,
                 borderRadius: BorderRadius.only(
