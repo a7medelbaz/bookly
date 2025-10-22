@@ -1,3 +1,5 @@
+import 'package:bookly/Features/Home/presentation/views/widgets/books_recommendations_list.dart';
+
 import '../../../../../Core/utils/styles.dart';
 import 'app_slide_animation_text.dart';
 import 'custom_book_card.dart';
@@ -72,6 +74,15 @@ class _BodyOfBookDetailsViewState
               ),
         ),
         SizedBox(height: 16),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(
+              left: 30,
+            ),
+            child: BooksRecommendationsList(),
+          ),
+        ),
+        SizedBox(height: 40),
       ],
     );
   }
