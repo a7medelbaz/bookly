@@ -28,10 +28,7 @@ class AppSlideAnimationText
             padding: padding,
             child: Align(
               alignment: alignment,
-              child: Text(
-                text,
-                style:textStyle,
-              ),
+              child: Text(text, style: textStyle),
             ),
           ),
         );

@@ -112,7 +112,7 @@ class _CustomSearchTextFieldState
 }
 
 // Usage Example:
-// 
+//
 // class SearchExample extends StatefulWidget {
 //   @override
 //   State<SearchExample> createState() => _SearchExampleState();
