@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../../../Core/utils/constants.dart';
 import 'splash_slide_animation_text.dart';
-import 'package:flutter/material.dart';
 
 class BodyOfSplashView extends StatefulWidget {
   const BodyOfSplashView({super.key});

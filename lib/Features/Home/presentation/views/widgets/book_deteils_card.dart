@@ -1,7 +1,7 @@
-import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../Core/utils/constants.dart';
 import '../../../../../Core/utils/styles.dart';
 import 'book_price_and_rating.dart';
 

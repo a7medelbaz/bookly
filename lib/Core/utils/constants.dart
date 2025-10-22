@@ -21,6 +21,9 @@ class MyColors {
   static const reviewContainerColor = Color(
     0xffEF8262,
   );
+  static const autherNameColor = Color(
+    0xffFFFFFF,
+  );
 }
 
 class MyAssets {
