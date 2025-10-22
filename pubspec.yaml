@@ -26,11 +26,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-# assets
+  # assets
   assets:
     - assets/images/
 
-# fonts
+  # fonts
   fonts:
     - family: GT Sectra Fine Regular
       fonts:
