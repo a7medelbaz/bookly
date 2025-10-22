@@ -9,10 +9,14 @@ class PanelizationSummary extends Equatable {
     this.containsImageBubbles,
   });
 
-  factory PanelizationSummary.fromJson(Map<String, dynamic> json) {
+  factory PanelizationSummary.fromJson(
+    Map<String, dynamic> json,
+  ) {
     return PanelizationSummary(
-      containsEpubBubbles: json['containsEpubBubbles'] as bool?,
-      containsImageBubbles: json['containsImageBubbles'] as bool?,
+      containsEpubBubbles:
+          json['containsEpubBubbles'] as bool?,
+      containsImageBubbles:
+          json['containsImageBubbles'] as bool?,
     );
   }
 
@@ -26,11 +30,18 @@ class PanelizationSummary extends Equatable {
     bool? containsImageBubbles,
   }) {
     return PanelizationSummary(
-      containsEpubBubbles: containsEpubBubbles ?? this.containsEpubBubbles,
-      containsImageBubbles: containsImageBubbles ?? this.containsImageBubbles,
+      containsEpubBubbles:
+          containsEpubBubbles ??
+          this.containsEpubBubbles,
+      containsImageBubbles:
+          containsImageBubbles ??
+          this.containsImageBubbles,
     );
   }
 
   @override
-  List<Object?> get props => [containsEpubBubbles, containsImageBubbles];
+  List<Object?> get props => [
+    containsEpubBubbles,
+    containsImageBubbles,
+  ];
 }

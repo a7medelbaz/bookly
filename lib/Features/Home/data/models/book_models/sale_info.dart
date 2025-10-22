@@ -5,9 +5,15 @@ class SaleInfo extends Equatable {
   final String? saleability;
   final bool? isEbook;
 
-  const SaleInfo({this.country, this.saleability, this.isEbook});
+  const SaleInfo({
+    this.country,
+    this.saleability,
+    this.isEbook,
+  });
 
-  factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
+  factory SaleInfo.fromJson(
+    Map<String, dynamic> json,
+  ) => SaleInfo(
     country: json['country'] as String?,
     saleability: json['saleability'] as String?,
     isEbook: json['isEbook'] as bool?,
@@ -19,14 +25,23 @@ class SaleInfo extends Equatable {
     'isEbook': isEbook,
   };
 
-  SaleInfo copyWith({String? country, String? saleability, bool? isEbook}) {
+  SaleInfo copyWith({
+    String? country,
+    String? saleability,
+    bool? isEbook,
+  }) {
     return SaleInfo(
       country: country ?? this.country,
-      saleability: saleability ?? this.saleability,
+      saleability:
+          saleability ?? this.saleability,
       isEbook: isEbook ?? this.isEbook,
     );
   }
 
   @override
-  List<Object?> get props => [country, saleability, isEbook];
+  List<Object?> get props => [
+    country,
+    saleability,
+    isEbook,
+  ];
 }

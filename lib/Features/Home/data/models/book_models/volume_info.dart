@@ -12,7 +12,8 @@ class VolumeInfo extends Equatable {
   final String? publisher;
   final String? publishedDate;
   final String? description;
-  final List<IndustryIdentifier>? industryIdentifiers;
+  final List<IndustryIdentifier>?
+  industryIdentifiers;
   final ReadingModes? readingModes;
   final int? pageCount;
   final int? printedPageCount;
@@ -53,40 +54,66 @@ class VolumeInfo extends Equatable {
     this.canonicalVolumeLink,
   });
 
-  factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
+  factory VolumeInfo.fromJson(
+    Map<String, dynamic> json,
+  ) => VolumeInfo(
     title: json['title'] as String?,
     authors: json['authors'] as List<String>?,
     publisher: json['publisher'] as String?,
-    publishedDate: json['publishedDate'] as String?,
+    publishedDate:
+        json['publishedDate'] as String?,
     description: json['description'] as String?,
-    industryIdentifiers: (json['industryIdentifiers'] as List<dynamic>?)
-        ?.map((e) => IndustryIdentifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
+    industryIdentifiers:
+        (json['industryIdentifiers']
+                as List<dynamic>?)
+            ?.map(
+              (e) => IndustryIdentifier.fromJson(
+                e as Map<String, dynamic>,
+              ),
+            )
+            .toList(),
     readingModes: json['readingModes'] == null
         ? null
-        : ReadingModes.fromJson(json['readingModes'] as Map<String, dynamic>),
+        : ReadingModes.fromJson(
+            json['readingModes']
+                as Map<String, dynamic>,
+          ),
     pageCount: json['pageCount'] as int?,
-    printedPageCount: json['printedPageCount'] as int?,
+    printedPageCount:
+        json['printedPageCount'] as int?,
     dimensions: json['dimensions'] == null
         ? null
-        : Dimensions.fromJson(json['dimensions'] as Map<String, dynamic>),
+        : Dimensions.fromJson(
+            json['dimensions']
+                as Map<String, dynamic>,
+          ),
     printType: json['printType'] as String?,
-    categories: json['categories'] as List<String>?,
-    maturityRating: json['maturityRating'] as String?,
-    allowAnonLogging: json['allowAnonLogging'] as bool?,
-    contentVersion: json['contentVersion'] as String?,
-    panelizationSummary: json['panelizationSummary'] == null
+    categories:
+        json['categories'] as List<String>?,
+    maturityRating:
+        json['maturityRating'] as String?,
+    allowAnonLogging:
+        json['allowAnonLogging'] as bool?,
+    contentVersion:
+        json['contentVersion'] as String?,
+    panelizationSummary:
+        json['panelizationSummary'] == null
         ? null
         : PanelizationSummary.fromJson(
-            json['panelizationSummary'] as Map<String, dynamic>,
+            json['panelizationSummary']
+                as Map<String, dynamic>,
           ),
     imageLinks: json['imageLinks'] == null
         ? null
-        : ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+        : ImageLinks.fromJson(
+            json['imageLinks']
+                as Map<String, dynamic>,
+          ),
     language: json['language'] as String?,
     previewLink: json['previewLink'] as String?,
     infoLink: json['infoLink'] as String?,
-    canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+    canonicalVolumeLink:
+        json['canonicalVolumeLink'] as String?,
   );
 
   Map<String, dynamic> toJson() => {
@@ -95,7 +122,9 @@ class VolumeInfo extends Equatable {
     'publisher': publisher,
     'publishedDate': publishedDate,
     'description': description,
-    'industryIdentifiers': industryIdentifiers?.map((e) => e.toJson()).toList(),
+    'industryIdentifiers': industryIdentifiers
+        ?.map((e) => e.toJson())
+        .toList(),
     'readingModes': readingModes?.toJson(),
     'pageCount': pageCount,
     'printedPageCount': printedPageCount,
@@ -105,7 +134,8 @@ class VolumeInfo extends Equatable {
     'maturityRating': maturityRating,
     'allowAnonLogging': allowAnonLogging,
     'contentVersion': contentVersion,
-    'panelizationSummary': panelizationSummary?.toJson(),
+    'panelizationSummary': panelizationSummary
+        ?.toJson(),
     'imageLinks': imageLinks?.toJson(),
     'language': language,
     'previewLink': previewLink,
@@ -140,24 +170,40 @@ class VolumeInfo extends Equatable {
       title: title ?? this.title,
       authors: authors ?? this.authors,
       publisher: publisher ?? this.publisher,
-      publishedDate: publishedDate ?? this.publishedDate,
-      description: description ?? this.description,
-      industryIdentifiers: industryIdentifiers ?? this.industryIdentifiers,
-      readingModes: readingModes ?? this.readingModes,
+      publishedDate:
+          publishedDate ?? this.publishedDate,
+      description:
+          description ?? this.description,
+      industryIdentifiers:
+          industryIdentifiers ??
+          this.industryIdentifiers,
+      readingModes:
+          readingModes ?? this.readingModes,
       pageCount: pageCount ?? this.pageCount,
-      printedPageCount: printedPageCount ?? this.printedPageCount,
+      printedPageCount:
+          printedPageCount ??
+          this.printedPageCount,
       dimensions: dimensions ?? this.dimensions,
       printType: printType ?? this.printType,
       categories: categories ?? this.categories,
-      maturityRating: maturityRating ?? this.maturityRating,
-      allowAnonLogging: allowAnonLogging ?? this.allowAnonLogging,
-      contentVersion: contentVersion ?? this.contentVersion,
-      panelizationSummary: panelizationSummary ?? this.panelizationSummary,
+      maturityRating:
+          maturityRating ?? this.maturityRating,
+      allowAnonLogging:
+          allowAnonLogging ??
+          this.allowAnonLogging,
+      contentVersion:
+          contentVersion ?? this.contentVersion,
+      panelizationSummary:
+          panelizationSummary ??
+          this.panelizationSummary,
       imageLinks: imageLinks ?? this.imageLinks,
       language: language ?? this.language,
-      previewLink: previewLink ?? this.previewLink,
+      previewLink:
+          previewLink ?? this.previewLink,
       infoLink: infoLink ?? this.infoLink,
-      canonicalVolumeLink: canonicalVolumeLink ?? this.canonicalVolumeLink,
+      canonicalVolumeLink:
+          canonicalVolumeLink ??
+          this.canonicalVolumeLink,
     );
   }
 
