@@ -1,3 +1,4 @@
+import 'package:bookly/Core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'app_slide_animation_text.dart';
@@ -63,6 +64,7 @@ class _BodyOfTheHomeViewState
                 alignment: Alignment.topLeft,
                 slideAnimation: slideAnimation,
                 text: 'Best Sellers',
+                textStyle: MyStyles.textStyle18,
               ),
               SizedBox(height: 20),
             ],
