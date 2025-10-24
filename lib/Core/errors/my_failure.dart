@@ -1,0 +1,3 @@
+class MyFailure {}
+
+class ServerFailure {}
