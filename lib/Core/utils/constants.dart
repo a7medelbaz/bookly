@@ -44,4 +44,6 @@ abstract class MyUrlConstants {
       'https://www.googleapis.com/books/v1/volumes?';
   static const myBookToken =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc1ODgzOTUxOH0.jq8WsHDLqfTBgNWYTMmAU1U4qk_zuvm8yqfZaeaM-n0';
+  static const bestSellerEndPoint =
+      'q=subject:programming&filtering=free-ebooks&sorting-newest';
 }
