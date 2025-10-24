@@ -1,3 +1,3 @@
 class MyFailure {}
 
-class ServerFailure {}
+class ServerFailure extends MyFailure {}
