@@ -4,9 +4,9 @@ import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo {
   // Feature Books
-  Future<Either<MyFailure, BookModel>>
+  Future<Either<MyFailure, List<BookModel>>>
   featchFeatureBooks();
   // Best Seller Books
-  Future<Either<MyFailure, BookModel>>
+  Future<Either<MyFailure, List<BookModel>>>
   featchBestSellereBooks();
 }
