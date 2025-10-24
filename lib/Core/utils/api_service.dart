@@ -1,17 +1,17 @@
+import 'package:bookly/Core/utils/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class ApiService {
-  late Dio dio;
-  final String url;
-  ApiService({required this.url}) {
+  late Dio _dio;
+  ApiService() {
     BaseOptions options = BaseOptions(
-      baseUrl: url,
+      baseUrl: MyUrlConstants.myBasicsBooksUrl,
       receiveDataWhenStatusError: true,
       connectTimeout: const Duration(seconds: 20),
       receiveTimeout: const Duration(seconds: 20),
     );
-    dio = Dio(options);
+    _dio = Dio(options);
   }
 
   Future<List<dynamic>> get({
@@ -25,7 +25,7 @@ class ApiService {
       });
     }
     try {
-      final response = await dio.get(
+      final response = await _dio.get(
         endPoint,
         options: Options(headers: headers),
       );
