@@ -9,13 +9,13 @@ abstract class MyRoutes {
       '/searchViewRoute';
 }
 
-class MyConstants {
+abstract class MyConstants {
   static const kTransitionDuration = Duration(
     seconds: 1,
   );
 }
 
-class MyColors {
+abstract class MyColors {
   static const kPrimaryColor = Color(0xff100B20);
   static const priceContainerColor = Color(
     0xffE4E4E4,
@@ -28,7 +28,7 @@ class MyColors {
   );
 }
 
-class MyAssets {
+abstract class MyAssets {
   static const booklyLogo =
       'assets/images/Logo.png';
   static const testImage =
@@ -37,4 +37,11 @@ class MyAssets {
       'assets/images/testimage2.png.webp';
   static const kPrimaryFont =
       'GT Sectra Fine Regular';
+}
+
+abstract class MyUrlConstants {
+  static const myBasicsBooksUrl =
+      'https://www.googleapis.com/books/v1/volumes?';
+  static const myBookToken =
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc1ODgzOTUxOH0.jq8WsHDLqfTBgNWYTMmAU1U4qk_zuvm8yqfZaeaM-n0';
 }
