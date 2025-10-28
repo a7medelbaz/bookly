@@ -1,4 +1,4 @@
-import 'package:bookly/Core/utils/constants.dart';
+import 'constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,6 @@
-import 'widgets/search_textfiled.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/search_textfiled.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
