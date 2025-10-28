@@ -10,6 +10,7 @@ class HomeRepoImplementation implements HomeRepo {
   HomeRepoImplementation(this.apiService);
   @override
   Future<Either<MyFailure, List<BookModel>>>
+  // in this api there is no best seller books so i used newestbooks as best seller
   featchBestSellereBooks() async {
     try {
       List<dynamic> listOfBestSellerBooks =
