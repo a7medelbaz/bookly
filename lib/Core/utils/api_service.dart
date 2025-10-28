@@ -1,6 +1,7 @@
-import 'constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+
+import 'constants.dart';
 
 class ApiService {
   late Dio _dio;
