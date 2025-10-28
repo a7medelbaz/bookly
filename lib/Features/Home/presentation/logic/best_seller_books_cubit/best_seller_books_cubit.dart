@@ -11,7 +11,7 @@ class BestSellerBooksCubit
     : super(BestSellerBooksInitial());
   final HomeRepo homeRepo;
 
-  Future featchGeneralBooks() async {
+  Future featchBestSellerlBooks() async {
     emit(BestSellerBooksLoading());
     var result = await homeRepo
         .featchBestSellereBooks();
