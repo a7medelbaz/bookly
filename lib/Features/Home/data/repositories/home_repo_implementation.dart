@@ -13,51 +13,32 @@ class HomeRepoImplementation implements HomeRepo {
   Future<Either<MyFailure, List<BookModel>>>
   // in this api there is no best seller books so i used newestbooks as best seller
   featchBestSellereBooks() async {
-    try {
-      List<dynamic> listOfBestSellerBooks =
-          await apiService.get(
-            endPoint:
-                MyUrlConstants.bestSellerEndPoint,
-            token: MyUrlConstants.myBookToken,
-          );
-      // List<BookModel> bestSellerBooks = [];
-      return right(
-        listOfBestSellerBooks
-            // Iterable of maps of listOfBestSellerBooks
-            .map(
-              (book) => BookModel.fromJson(book),
-            )
-            .toList(),
-      );
-    } catch (e) {
-      if (e is DioException) {
-        return left(
-          ServerFailure.fromDioError(e),
-        );
-      } else {
-        return left(
-          ServerFailure(
-            errorMassage: e.toString(),
-          ),
-        );
-      }
-    }
+    return await featchYourBooks(
+      endPoint: MyUrlConstants.bestSellerEndPoint,
+    );
   }
-
   @override
   Future<Either<MyFailure, List<BookModel>>>
-  featchFeatureBooks() async {
+  featchGeneraleBooks() async {
+    return await featchYourBooks(
+      endPoint:
+          MyUrlConstants.generalBooksEndPoint,
+    );
+  }
+
+
+
+  Future<Either<MyFailure, List<BookModel>>>
+  featchYourBooks({required endPoint}) async {
     try {
-      List<dynamic> listOfBooks = await apiService
-          .get(
-            endPoint: MyUrlConstants
-                .generalBooksEndPoint,
+      List<dynamic> listOfYourBooks =
+          await apiService.get(
+            endPoint: endPoint,
             token: MyUrlConstants.myBookToken,
           );
-      // List<BookModel> bestSellerBooks = [];
       return right(
-        listOfBooks
-            // Iterable of maps of listOfBooks
+        listOfYourBooks
+            // Iterable of maps of listOfYourBooks
             .map(
               (book) => BookModel.fromJson(book),
             )
