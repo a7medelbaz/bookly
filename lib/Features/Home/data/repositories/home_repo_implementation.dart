@@ -4,6 +4,7 @@ import 'package:bookly/Core/utils/constants.dart';
 import 'package:bookly/Features/Home/data/models/book_model.dart';
 import 'package:bookly/Features/Home/data/repositories/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImplementation implements HomeRepo {
   final ApiService apiService;
@@ -29,14 +30,51 @@ class HomeRepoImplementation implements HomeRepo {
             .toList(),
       );
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(
+          ServerFailure.fromDioError(e),
+        );
+      } else {
+        return left(
+          ServerFailure(
+            errorMassage: e.toString(),
+          ),
+        );
+      }
     }
   }
 
   @override
   Future<Either<MyFailure, List<BookModel>>>
-  featchFeatureBooks() {
-    // TODO: implement featchFeatureBooks
-    throw UnimplementedError();
+  featchFeatureBooks() async {
+    try {
+      List<dynamic> listOfBooks = await apiService
+          .get(
+            endPoint: MyUrlConstants
+                .generalBooksEndPoint,
+            token: MyUrlConstants.myBookToken,
+          );
+      // List<BookModel> bestSellerBooks = [];
+      return right(
+        listOfBooks
+            // Iterable of maps of listOfBooks
+            .map(
+              (book) => BookModel.fromJson(book),
+            )
+            .toList(),
+      );
+    } catch (e) {
+      if (e is DioException) {
+        return left(
+          ServerFailure.fromDioError(e),
+        );
+      } else {
+        return left(
+          ServerFailure(
+            errorMassage: e.toString(),
+          ),
+        );
+      }
+    }
   }
 }
