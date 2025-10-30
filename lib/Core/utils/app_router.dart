@@ -1,4 +1,5 @@
-import 'api_service.dart';
+import 'package:bookly/Core/utils/service_locator.dart';
+
 import '../../Features/Home/data/repositories/home_repo_implementation.dart';
 import '../../Features/Home/presentation/logic/best_seller_books_cubit/best_seller_books_cubit.dart';
 import '../../Features/Home/presentation/logic/general_books_cubit/general_books_cubit.dart';
@@ -25,16 +26,12 @@ abstract class AppRouter {
             providers: [
               BlocProvider(
                 create: (context) => BestSellerBooksCubit(
-                  homeRepo: HomeRepoImplementation(
-                    apiService: ApiService(),
-                  ),
+                  homeRepo: getIt<HomeRepoImplementation>(),
                 ),
               ),
               BlocProvider(
                 create: (context) => GeneralBooksCubit(
-                  homeRepo: HomeRepoImplementation(
-                    apiService: ApiService(),
-                  ),
+                  homeRepo: getIt<HomeRepoImplementation>(),
                 ),
               ),
             ],
