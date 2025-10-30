@@ -26,14 +26,14 @@ abstract class AppRouter {
               BlocProvider(
                 create: (context) => BestSellerBooksCubit(
                   homeRepo: getIt<HomeRepoImplementation>()
-                    ..featchBestSellereBooks(),
-                ),
+                    ,
+                )..featchBestSellerlBooks(),
               ),
               BlocProvider(
                 create: (context) => GeneralBooksCubit(
                   homeRepo: getIt<HomeRepoImplementation>()
-                    ..featchGeneraleBooks(),
-                ),
+                    ,
+                )..featchGeneralBooks(),
               ),
             ],
             child: HomeView(),

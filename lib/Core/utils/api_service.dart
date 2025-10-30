@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 
 import 'constants.dart';
 
@@ -17,12 +16,8 @@ class ApiService {
 
   Future<List<dynamic>> get({
     required String endPoint,
-    @required String? token,
   }) async {
     Map<String, dynamic> headers = {};
-    if (token != null) {
-      headers.addAll({'Authorization': 'Bearer $token'});
-    }
     try {
       final response = await _dio.get(
         endPoint,
