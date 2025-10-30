@@ -14,12 +14,16 @@ class HomeRepoImplementation implements HomeRepo {
   Future<Either<MyFailure, List<BookModel>>>
   // in this api there is no best seller books so i used newestbooks as best seller
   featchBestSellereBooks() async {
-    return await featchYourBooks(endPoint: MyUrlConstants.bestSellerEndPoint);
+    return await featchYourBooks(
+      endPoint: MyUrlConstants.bestSellerEndPoint,
+    );
   }
 
   @override
   Future<Either<MyFailure, List<BookModel>>> featchGeneraleBooks() async {
-    return await featchYourBooks(endPoint: MyUrlConstants.generalBooksEndPoint);
+    return await featchYourBooks(
+      endPoint: MyUrlConstants.generalBooksEndPoint,
+    );
   }
 
   // ?featchYourBooks

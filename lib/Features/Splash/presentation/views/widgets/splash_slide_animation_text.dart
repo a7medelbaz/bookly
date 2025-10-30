@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/styles.dart';
 
-class SplashSlideAnimationText
-    extends StatelessWidget {
+class SplashSlideAnimationText extends StatelessWidget {
   const SplashSlideAnimationText({
     super.key,
     required this.slideAnimation,

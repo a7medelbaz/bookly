@@ -6,8 +6,7 @@ class PriceAndReviewCard extends StatelessWidget {
   final Color containerColor;
   final String containerText;
   final BorderRadiusGeometry borderRadius;
-  final VoidCallback?
-  onPressed; // Add onPressed callback
+  final VoidCallback? onPressed; // Add onPressed callback
 
   const PriceAndReviewCard({
     super.key,
@@ -23,16 +22,11 @@ class PriceAndReviewCard extends StatelessWidget {
       child: SizedBox(
         height: 50,
         child: ElevatedButton(
-          onPressed:
-              onPressed ??
-              () {}, // Default empty function if null
+          onPressed: onPressed ?? () {}, // Default empty function if null
           style: ElevatedButton.styleFrom(
             backgroundColor: containerColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: borderRadius,
-            ),
-            elevation:
-                0, // Remove shadow if you want flat design
+            shape: RoundedRectangleBorder(borderRadius: borderRadius),
+            elevation: 0, // Remove shadow if you want flat design
           ),
           child: Text(
             containerText,

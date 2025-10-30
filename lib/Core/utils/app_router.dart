@@ -1,7 +1,7 @@
-import 'package:bookly/Core/utils/api_service.dart';
-import 'package:bookly/Features/Home/data/repositories/home_repo_implementation.dart';
-import 'package:bookly/Features/Home/presentation/logic/best_seller_books_cubit/best_seller_books_cubit.dart';
-import 'package:bookly/Features/Home/presentation/logic/general_books_cubit/general_books_cubit.dart';
+import 'api_service.dart';
+import '../../Features/Home/data/repositories/home_repo_implementation.dart';
+import '../../Features/Home/presentation/logic/best_seller_books_cubit/best_seller_books_cubit.dart';
+import '../../Features/Home/presentation/logic/general_books_cubit/general_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

@@ -6,13 +6,11 @@ class SearchView extends StatefulWidget {
   const SearchView({super.key});
 
   @override
-  State<SearchView> createState() =>
-      _SearchViewState();
+  State<SearchView> createState() => _SearchViewState();
 }
 
 class _SearchViewState extends State<SearchView> {
-  final TextEditingController _searchController =
-      TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void dispose() {
@@ -27,17 +25,13 @@ class _SearchViewState extends State<SearchView> {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(
-                      16.0,
-                    ),
+                    padding: const EdgeInsets.all(16.0),
                     child: CustomSearchTextField(
-                      controller:
-                          _searchController,
+                      controller: _searchController,
                     ),
                   ),
                 ),

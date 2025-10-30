@@ -8,12 +8,10 @@ class BodyOfSplashView extends StatefulWidget {
   const BodyOfSplashView({super.key});
 
   @override
-  State<BodyOfSplashView> createState() =>
-      _BodyOfSplashViewState();
+  State<BodyOfSplashView> createState() => _BodyOfSplashViewState();
 }
 
-class _BodyOfSplashViewState
-    extends State<BodyOfSplashView>
+class _BodyOfSplashViewState extends State<BodyOfSplashView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slideAnimation;
@@ -45,35 +43,29 @@ class _BodyOfSplashViewState
   }
 
   Future<Null> navigateToHomeView() {
-    return Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        // Get.off(
-        //   () => HomeView(),
-        //   transition:
-        //       Transition.rightToLeftWithFade,
-        //   duration:
-        //       MyConstants.kTransitionDuration,
-        // );
-        GoRouter.of(
-          // ignore: use_build_context_synchronously
-          context,
-        ).go(MyRoutes.homeViewRoute);
-      },
-    );
+    return Future.delayed(const Duration(seconds: 2), () {
+      // Get.off(
+      //   () => HomeView(),
+      //   transition:
+      //       Transition.rightToLeftWithFade,
+      //   duration:
+      //       MyConstants.kTransitionDuration,
+      // );
+      GoRouter.of(
+        // ignore: use_build_context_synchronously
+        context,
+      ).go(MyRoutes.homeViewRoute);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment:
-          CrossAxisAlignment.stretch,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(MyAssets.booklyLogo),
-        SplashSlideAnimationText(
-          slideAnimation: slideAnimation,
-        ),
+        SplashSlideAnimationText(slideAnimation: slideAnimation),
       ],
     );
   }

@@ -5,9 +5,7 @@ import '../models/book_model.dart';
 
 abstract class HomeRepo {
   // Feature Books
-  Future<Either<MyFailure, List<BookModel>>>
-  featchGeneraleBooks();
+  Future<Either<MyFailure, List<BookModel>>> featchGeneraleBooks();
   // Best Seller Books
-  Future<Either<MyFailure, List<BookModel>>>
-  featchBestSellereBooks();
+  Future<Either<MyFailure, List<BookModel>>> featchBestSellereBooks();
 }

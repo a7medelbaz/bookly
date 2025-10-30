@@ -10,12 +10,10 @@ class BodyOfTheHomeView extends StatefulWidget {
   const BodyOfTheHomeView({super.key});
 
   @override
-  State<BodyOfTheHomeView> createState() =>
-      _BodyOfTheHomeViewState();
+  State<BodyOfTheHomeView> createState() => _BodyOfTheHomeViewState();
 }
 
-class _BodyOfTheHomeViewState
-    extends State<BodyOfTheHomeView>
+class _BodyOfTheHomeViewState extends State<BodyOfTheHomeView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slideAnimation;
@@ -58,9 +56,7 @@ class _BodyOfTheHomeViewState
               BooksListViewBuilder(),
               SizedBox(height: 49),
               AppSlideAnimationText(
-                padding: EdgeInsets.only(
-                  left: 30.0,
-                ),
+                padding: EdgeInsets.only(left: 30.0),
                 alignment: Alignment.topLeft,
                 slideAnimation: slideAnimation,
                 text: 'Best Sellers',

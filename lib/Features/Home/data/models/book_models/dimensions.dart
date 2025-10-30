@@ -5,15 +5,9 @@ class Dimensions extends Equatable {
   final String? width;
   final String? thickness;
 
-  const Dimensions({
-    this.height,
-    this.width,
-    this.thickness,
-  });
+  const Dimensions({this.height, this.width, this.thickness});
 
-  factory Dimensions.fromJson(
-    Map<String, dynamic> json,
-  ) => Dimensions(
+  factory Dimensions.fromJson(Map<String, dynamic> json) => Dimensions(
     height: json['height'] as String?,
     width: json['width'] as String?,
     thickness: json['thickness'] as String?,
@@ -25,11 +19,7 @@ class Dimensions extends Equatable {
     'thickness': thickness,
   };
 
-  Dimensions copyWith({
-    String? height,
-    String? width,
-    String? thickness,
-  }) {
+  Dimensions copyWith({String? height, String? width, String? thickness}) {
     return Dimensions(
       height: height ?? this.height,
       width: width ?? this.width,
@@ -38,9 +28,5 @@ class Dimensions extends Equatable {
   }
 
   @override
-  List<Object?> get props => [
-    height,
-    width,
-    thickness,
-  ];
+  List<Object?> get props => [height, width, thickness];
 }

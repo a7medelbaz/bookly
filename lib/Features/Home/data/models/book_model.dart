@@ -23,31 +23,20 @@ class BookModel extends Equatable {
     this.accessInfo,
   });
 
-  factory BookModel.fromJson(
-    Map<String, dynamic> json,
-  ) => BookModel(
+  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
     kind: json['kind'] as String?,
     id: json['id'] as String?,
     etag: json['etag'] as String?,
     selfLink: json['selfLink'] as String?,
     volumeInfo: json['volumeInfo'] == null
         ? null
-        : VolumeInfo.fromJson(
-            json['volumeInfo']
-                as Map<String, dynamic>,
-          ),
+        : VolumeInfo.fromJson(json['volumeInfo'] as Map<String, dynamic>),
     saleInfo: json['saleInfo'] == null
         ? null
-        : SaleInfo.fromJson(
-            json['saleInfo']
-                as Map<String, dynamic>,
-          ),
+        : SaleInfo.fromJson(json['saleInfo'] as Map<String, dynamic>),
     accessInfo: json['accessInfo'] == null
         ? null
-        : AccessInfo.fromJson(
-            json['accessInfo']
-                as Map<String, dynamic>,
-          ),
+        : AccessInfo.fromJson(json['accessInfo'] as Map<String, dynamic>),
   );
 
   Map<String, dynamic> toJson() => {
@@ -82,14 +71,6 @@ class BookModel extends Equatable {
 
   @override
   List<Object?> get props {
-    return [
-      kind,
-      id,
-      etag,
-      selfLink,
-      volumeInfo,
-      saleInfo,
-      accessInfo,
-    ];
+    return [kind, id, etag, selfLink, volumeInfo, saleInfo, accessInfo];
   }
 }
