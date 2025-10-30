@@ -1,3 +1,4 @@
+import 'package:bookly/Core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,5 +28,6 @@ class Bookly extends StatelessWidget {
 }
 
 void main() {
+  setupServiceLocator();
   runApp(const Bookly());
 }
