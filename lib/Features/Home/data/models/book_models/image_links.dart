@@ -17,11 +17,8 @@ class ImageLinks extends Equatable {
     this.extraLarge,
   });
 
-  factory ImageLinks.fromJson(
-    Map<String, dynamic> json,
-  ) => ImageLinks(
-    smallThumbnail:
-        json['smallThumbnail'] as String?,
+  factory ImageLinks.fromJson(Map<String, dynamic> json) => ImageLinks(
+    smallThumbnail: json['smallThumbnail'] as String?,
     thumbnail: json['thumbnail'] as String?,
     small: json['small'] as String?,
     medium: json['medium'] as String?,
@@ -47,8 +44,7 @@ class ImageLinks extends Equatable {
     String? extraLarge,
   }) {
     return ImageLinks(
-      smallThumbnail:
-          smallThumbnail ?? this.smallThumbnail,
+      smallThumbnail: smallThumbnail ?? this.smallThumbnail,
       thumbnail: thumbnail ?? this.thumbnail,
       small: small ?? this.small,
       medium: medium ?? this.medium,
@@ -59,13 +55,6 @@ class ImageLinks extends Equatable {
 
   @override
   List<Object?> get props {
-    return [
-      smallThumbnail,
-      thumbnail,
-      small,
-      medium,
-      large,
-      extraLarge,
-    ];
+    return [smallThumbnail, thumbnail, small, medium, large, extraLarge];
   }
 }

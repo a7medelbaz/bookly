@@ -18,27 +18,19 @@ class CustomBookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(
-          context,
-        ).push(MyRoutes.bookDetailsViewRoute);
+        GoRouter.of(context).push(MyRoutes.bookDetailsViewRoute);
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  MyAssets.testImage2,
-                ),
+                image: AssetImage(MyAssets.testImage2),
                 fit: BoxFit.fill,
               ),
-              borderRadius: BorderRadius.circular(
-                borderCircularRadius,
-              ),
+              borderRadius: BorderRadius.circular(borderCircularRadius),
             ),
           ),
         ),

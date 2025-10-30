@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomSearchTextField
-    extends StatefulWidget {
+class CustomSearchTextField extends StatefulWidget {
   final TextEditingController? controller;
   final String hintText;
   final ValueChanged<String>? onChanged;
@@ -24,8 +23,7 @@ class CustomSearchTextField
       _CustomSearchTextFieldState();
 }
 
-class _CustomSearchTextFieldState
-    extends State<CustomSearchTextField> {
+class _CustomSearchTextFieldState extends State<CustomSearchTextField> {
   @override
   void initState() {
     super.initState();
@@ -40,37 +38,27 @@ class _CustomSearchTextFieldState
     return TextField(
       controller: widget.controller,
       onChanged: widget.onChanged,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 16,
-      ),
+      style: TextStyle(color: Colors.white, fontSize: 16),
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: TextStyle(
-          color: Colors.white.withValues(
-            alpha: 0.5,
-          ),
+          color: Colors.white.withValues(alpha: 0.5),
 
           fontSize: 16,
         ),
         prefixIcon: Icon(
           Icons.search,
-          color:
-              widget.iconColor ??
-              Colors.white.withValues(alpha: 0.7),
+          color: widget.iconColor ?? Colors.white.withValues(alpha: 0.7),
           size: 24,
         ),
         suffixIcon:
-            widget.controller != null &&
-                widget.controller!.text.isNotEmpty
+            widget.controller != null && widget.controller!.text.isNotEmpty
             ? IconButton(
                 icon: Icon(
                   Icons.clear,
                   color:
                       widget.iconColor ??
-                      Colors.white.withValues(
-                        alpha: 0.7,
-                      ),
+                      Colors.white.withValues(alpha: 0.7),
                 ),
                 onPressed: () {
                   widget.controller?.clear();
@@ -83,8 +71,7 @@ class _CustomSearchTextFieldState
             : null,
         filled: true,
         fillColor:
-            widget.backgroundColor ??
-            Colors.white.withValues(alpha: 0.1),
+            widget.backgroundColor ?? Colors.white.withValues(alpha: 0.1),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -96,16 +83,11 @@ class _CustomSearchTextFieldState
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(
-            color: Colors.white.withValues(
-              alpha: 0.3,
-            ),
+            color: Colors.white.withValues(alpha: 0.3),
             width: 1,
           ),
         ),
-        contentPadding: EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
     );
   }

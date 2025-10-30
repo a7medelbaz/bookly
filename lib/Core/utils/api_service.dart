@@ -1,6 +1,7 @@
-import 'constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+
+import 'constants.dart';
 
 class ApiService {
   late Dio _dio;
@@ -20,9 +21,7 @@ class ApiService {
   }) async {
     Map<String, dynamic> headers = {};
     if (token != null) {
-      headers.addAll({
-        'Authorization': 'Bearer $token',
-      });
+      headers.addAll({'Authorization': 'Bearer $token'});
     }
     try {
       final response = await _dio.get(
@@ -32,9 +31,7 @@ class ApiService {
       if (response.statusCode == 200) {
         return response.data;
       } else {
-        throw Exception(
-          "GET request error: ${response.statusCode}",
-        );
+        throw Exception("GET request error: ${response.statusCode}");
       }
     } catch (e) {
       throw Exception("GET request error: $e");

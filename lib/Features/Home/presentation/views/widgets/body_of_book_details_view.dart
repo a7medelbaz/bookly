@@ -6,8 +6,7 @@ import 'books_recommendations_list.dart';
 import 'custom_book_card.dart';
 import 'selected_book_details.dart';
 
-class BodyOfBookDetailsView
-    extends StatefulWidget {
+class BodyOfBookDetailsView extends StatefulWidget {
   const BodyOfBookDetailsView({super.key});
 
   @override
@@ -15,8 +14,7 @@ class BodyOfBookDetailsView
       _BodyOfBookDetailsViewState();
 }
 
-class _BodyOfBookDetailsViewState
-    extends State<BodyOfBookDetailsView>
+class _BodyOfBookDetailsViewState extends State<BodyOfBookDetailsView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slideAnimation;
@@ -49,9 +47,7 @@ class _BodyOfBookDetailsViewState
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(
-      context,
-    ).size.width;
+    double width = MediaQuery.of(context).size.width;
     return Column(
       children: [
         SizedBox(height: 35),
@@ -68,17 +64,14 @@ class _BodyOfBookDetailsViewState
           alignment: Alignment.topLeft,
           slideAnimation: slideAnimation,
           text: 'You can also like',
-          textStyle: MyStyles.textStyle14
-              .copyWith(
-                fontStyle: FontStyle.italic,
-              ),
+          textStyle: MyStyles.textStyle14.copyWith(
+            fontStyle: FontStyle.italic,
+          ),
         ),
         SizedBox(height: 16),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(
-              left: 30,
-            ),
+            padding: const EdgeInsets.only(left: 30),
             child: BooksRecommendationsList(),
           ),
         ),

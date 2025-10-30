@@ -8,24 +8,17 @@ class MyFailure {
 class ServerFailure extends MyFailure {
   ServerFailure({required super.errorMassage});
 
-  factory ServerFailure.fromDioError(
-    DioException dioError,
-  ) {
+  factory ServerFailure.fromDioError(DioException dioError) {
     switch (dioError.type) {
       case DioExceptionType.connectionTimeout:
         return ServerFailure(
-          errorMassage:
-              'Connection Timeout with Api Server',
+          errorMassage: 'Connection Timeout with Api Server',
         );
       case DioExceptionType.sendTimeout:
-        return ServerFailure(
-          errorMassage:
-              'Send Timeout with Api Server',
-        );
+        return ServerFailure(errorMassage: 'Send Timeout with Api Server');
       case DioExceptionType.receiveTimeout:
         return ServerFailure(
-          errorMassage:
-              'Receive Timeout with Api Server',
+          errorMassage: 'Receive Timeout with Api Server',
         );
       case DioExceptionType.badCertificate:
         return ServerFailure(
@@ -39,8 +32,7 @@ class ServerFailure extends MyFailure {
         );
       case DioExceptionType.cancel:
         return ServerFailure(
-          errorMassage:
-              "The request was cancelled before completion.",
+          errorMassage: "The request was cancelled before completion.",
         );
       case DioExceptionType.connectionError:
         return ServerFailure(
@@ -53,20 +45,14 @@ class ServerFailure extends MyFailure {
               "An unexpected error occurred. Please try again later or contact support.",
         );
     }
-    return ServerFailure(
-      errorMassage: 'Opps Unexpected Error',
-    );
+    return ServerFailure(errorMassage: 'Opps Unexpected Error');
   }
 
   // ? ServerFailure.fromResponse
-  factory ServerFailure.fromResponse(
-    int statusCode,
-    dynamic response,
-  ) {
+  factory ServerFailure.fromResponse(int statusCode, dynamic response) {
     if (statusCode == 400) {
       return ServerFailure(
-        errorMassage:
-            "Bad Request. Please check your input.",
+        errorMassage: "Bad Request. Please check your input.",
       );
     } else if (statusCode == 401) {
       return ServerFailure(
@@ -85,8 +71,7 @@ class ServerFailure extends MyFailure {
       );
     } else if (statusCode == 500) {
       return ServerFailure(
-        errorMassage:
-            "Internal Server Error. Please try again later.",
+        errorMassage: "Internal Server Error. Please try again later.",
       );
     } else {
       return ServerFailure(

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'custom_book_card.dart';
 
-class BooksRecommendationsList
-    extends StatelessWidget {
+class BooksRecommendationsList extends StatelessWidget {
   const BooksRecommendationsList({super.key});
 
   @override
@@ -13,9 +12,7 @@ class BooksRecommendationsList
       itemCount: 6,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.only(
-            right: 10.0,
-          ),
+          padding: const EdgeInsets.only(right: 10.0),
           child: CustomBookCard(
             aspectRatio: 2 / 3,
             borderCircularRadius: 20,
