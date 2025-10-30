@@ -8,7 +8,7 @@ part 'best_seller_books_state.dart';
 
 class BestSellerBooksCubit
     extends Cubit<BestSellerBooksState> {
-  BestSellerBooksCubit(this.homeRepo)
+  BestSellerBooksCubit({required this.homeRepo})
     : super(BestSellerBooksInitial());
   final HomeRepo homeRepo;
 
