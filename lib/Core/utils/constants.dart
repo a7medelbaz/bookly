@@ -26,6 +26,8 @@ abstract class MyAssets {
 }
 
 abstract class MyUrlConstants {
+  static const myimageUrltest =
+      'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg';
   static const myBasicsBooksUrl =
       'https://www.googleapis.com/books/v1/volumes?';
   static const myBookToken =
@@ -33,5 +35,5 @@ abstract class MyUrlConstants {
   static const bestSellerEndPoint =
       'q=subject:general&filtering=free-ebooks&sorting-newest';
   static const generalBooksEndPoint =
-      'q=subject:general&filtering=free-ebooks';
+      'q=subject:programming>&filtering=free-ebooks&sorting-newest';
 }
