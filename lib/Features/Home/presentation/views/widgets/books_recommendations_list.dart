@@ -20,6 +20,7 @@ class BooksRecommendationsList extends StatelessWidget {
               GoRouter.of(context).push(MyRoutes.bookDetailsViewRoute);
             },
             child: CustomBookCard(
+              imageUrl: 'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg',
               aspectRatio: 2 / 3,
               borderCircularRadius: 20,
               horizontalPadding: 0,

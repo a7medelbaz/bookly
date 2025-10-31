@@ -20,7 +20,7 @@ class BestSellerBookSilverListBuilder extends StatelessWidget {
             onTap: () {
               GoRouter.of(context).push(MyRoutes.bookDetailsViewRoute);
             },
-            child: BestSellerBookCard(),
+            child: BestSellerBookCard(imageUrl: 'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg',),
           ),
         );
       }),
