@@ -1,3 +1,4 @@
+import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/styles.dart';
@@ -52,7 +53,7 @@ class _BodyOfBookDetailsViewState extends State<BodyOfBookDetailsView>
       children: [
         SizedBox(height: 35),
         CustomBookCard(
-          imageUrl: 'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg',
+          imageUrl: MyUrlConstants.myimageUrltest,
           aspectRatio: 2.7 / 1.8,
           borderCircularRadius: 18,
           horizontalPadding: width * .25,

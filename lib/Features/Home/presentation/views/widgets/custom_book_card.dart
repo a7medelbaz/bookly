@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomBookCard extends StatelessWidget {
@@ -19,13 +20,18 @@ class CustomBookCard extends StatelessWidget {
       aspectRatio: aspectRatio,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(imageUrl!),
-              fit: BoxFit.fill,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(borderCircularRadius),
+          child: CachedNetworkImage(
+            imageUrl: imageUrl!,
+            fit: BoxFit.fill,
+            errorWidget: (context, url, error) => Center(
+              child: Icon(
+                Icons.error_outline,
+                color: Theme.of(context).colorScheme.error,
+                size: 70,
+              ),
             ),
-            borderRadius: BorderRadius.circular(borderCircularRadius),
           ),
         ),
       ),

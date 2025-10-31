@@ -1,12 +1,13 @@
+import 'package:bookly/Features/Home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
 
 import 'book_deteils_card.dart';
 import 'custom_book_card.dart';
 
 class BestSellerBookCard extends StatelessWidget {
-      final String imageUrl;
+  final BookModel bookModel;
 
-  const BestSellerBookCard({super.key, required this.imageUrl});
+  const BestSellerBookCard({super.key, required this.bookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +22,13 @@ class BestSellerBookCard extends StatelessWidget {
         child: Row(
           children: [
             CustomBookCard(
-              imageUrl: 'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg',
+              imageUrl: bookModel.volumeInfo!.imageLinks!.thumbnail!,
               horizontalPadding: 0,
               aspectRatio: 2.6 / 4,
               borderCircularRadius: 8,
             ),
             SizedBox(width: 30),
-            BookDeteilsCard(),
+            BookDeteilsCard(bookModel:bookModel),
           ],
         ),
       ),
