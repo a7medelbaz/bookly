@@ -1,8 +1,10 @@
+import 'package:bookly/Core/utils/constants.dart';
 import 'package:bookly/Core/widgets/custom_error_widget.dart';
 import 'package:bookly/Core/widgets/custom_loading_indicator.dart';
 import 'package:bookly/Features/Home/presentation/logic/general_books_cubit/general_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import 'custom_book_card.dart';
 
@@ -20,10 +22,17 @@ class BooksListViewBuilder extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 4,
               itemBuilder: (context, index) {
-                return CustomBookCard(
-                  horizontalPadding: 15,
-                  borderCircularRadius: 20,
-                  aspectRatio: 3 / 4,
+                return GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push(MyRoutes.bookDetailsViewRoute);
+                  },
+                  child: CustomBookCard(
+                    horizontalPadding: 15,
+                    borderCircularRadius: 20,
+                    aspectRatio: 3 / 4,
+                  ),
                 );
               },
             ),

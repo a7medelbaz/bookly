@@ -1,4 +1,6 @@
+import 'package:bookly/Core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'custom_book_card.dart';
 
@@ -13,10 +15,15 @@ class BooksRecommendationsList extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(right: 10.0),
-          child: CustomBookCard(
-            aspectRatio: 2 / 3,
-            borderCircularRadius: 20,
-            horizontalPadding: 0,
+          child: GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(MyRoutes.bookDetailsViewRoute);
+            },
+            child: CustomBookCard(
+              aspectRatio: 2 / 3,
+              borderCircularRadius: 20,
+              horizontalPadding: 0,
+            ),
           ),
         );
       },
