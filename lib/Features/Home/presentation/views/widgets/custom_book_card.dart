@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../../../../Core/utils/constants.dart';
 
 class CustomBookCard extends StatelessWidget {
   final double aspectRatio;
   final double borderCircularRadius;
   final double horizontalPadding;
+  final String? imageUrl;
   const CustomBookCard({
     super.key,
     required this.aspectRatio,
     required this.borderCircularRadius,
     required this.horizontalPadding,
+    required this.imageUrl,
   });
 
   @override
@@ -21,7 +22,7 @@ class CustomBookCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(MyAssets.testImage2),
+              image: NetworkImage(imageUrl!),
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(borderCircularRadius),

@@ -29,6 +29,11 @@ class BooksListViewBuilder extends StatelessWidget {
                     ).push(MyRoutes.bookDetailsViewRoute);
                   },
                   child: CustomBookCard(
+                    imageUrl: state
+                        .books[index]
+                        .volumeInfo!
+                        .imageLinks!
+                        .thumbnail,
                     horizontalPadding: 15,
                     borderCircularRadius: 20,
                     aspectRatio: 3 / 4,
