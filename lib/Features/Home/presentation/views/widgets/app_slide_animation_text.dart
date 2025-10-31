@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppSlideAnimationText
-    extends StatelessWidget {
+class AppSlideAnimationText extends StatelessWidget {
   const AppSlideAnimationText({
     super.key,
     required this.slideAnimation,
@@ -28,10 +27,7 @@ class AppSlideAnimationText
             padding: padding,
             child: Align(
               alignment: alignment,
-              child: Text(
-                text,
-                style:textStyle,
-              ),
+              child: Text(text, style: textStyle),
             ),
           ),
         );

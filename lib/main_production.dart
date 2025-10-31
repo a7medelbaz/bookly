@@ -1,3 +1,4 @@
+import 'package:bookly/Core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,21 +14,20 @@ class Bookly extends StatelessWidget {
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor:
-            MyColors.kPrimaryColor,
+        scaffoldBackgroundColor: MyColors.kPrimaryColor,
         appBarTheme: AppBarTheme(
           backgroundColor: MyColors.kPrimaryColor,
           elevation: 0,
         ),
-        textTheme:
-            GoogleFonts.montserratTextTheme(
-              ThemeData.dark().textTheme,
-            ),
+        textTheme: GoogleFonts.montserratTextTheme(
+          ThemeData.dark().textTheme,
+        ),
       ),
     );
   }
 }
 
 void main() {
+  setupServiceLocator();
   runApp(const Bookly());
 }

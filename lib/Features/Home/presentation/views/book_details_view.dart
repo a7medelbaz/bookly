@@ -19,15 +19,11 @@ class BookDetailsView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
-              Icons.shopping_cart_outlined,
-            ),
+            icon: Icon(Icons.shopping_cart_outlined),
           ),
         ],
       ),
-      body: SafeArea(
-        child: BodyOfBookDetailsView(),
-      ),
+      body: SafeArea(child: BodyOfBookDetailsView()),
     );
   }
 }

@@ -13,20 +13,13 @@ class BookDeteilsCard extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          GoRouter.of(
-            context,
-          ).push(MyRoutes.bookDetailsViewRoute);
+          GoRouter.of(context).push(MyRoutes.bookDetailsViewRoute);
         },
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width:
-                  MediaQuery.of(
-                    context,
-                  ).size.width *
-                  .5,
+              width: MediaQuery.of(context).size.width * .5,
               child: Text(
                 'A Dream of Spring - Game Of Thrones',
                 style: MyStyles.textStyle20,
@@ -34,10 +27,7 @@ class BookDeteilsCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            Text(
-              'Gorge RR Martin',
-              style: MyStyles.textStyle14,
-            ),
+            Text('Gorge RR Martin', style: MyStyles.textStyle14),
             BookPriceAndRating(),
           ],
         ),
