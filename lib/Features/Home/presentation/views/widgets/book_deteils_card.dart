@@ -29,7 +29,10 @@ class BookDeteilsCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            Text((bookModel.volumeInfo?.authors ?? []).join(', '), style: MyStyles.textStyle14),
+            Text(
+              (bookModel.volumeInfo?.authors ?? []).join(', '),
+              style: MyStyles.textStyle14,
+            ),
             BookPriceAndRating(),
           ],
         ),

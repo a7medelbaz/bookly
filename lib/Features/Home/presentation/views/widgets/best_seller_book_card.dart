@@ -28,7 +28,7 @@ class BestSellerBookCard extends StatelessWidget {
               borderCircularRadius: 8,
             ),
             SizedBox(width: 30),
-            BookDeteilsCard(bookModel:bookModel),
+            BookDeteilsCard(bookModel: bookModel),
           ],
         ),
       ),
