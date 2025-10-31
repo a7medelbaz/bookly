@@ -4,7 +4,9 @@ import 'book_deteils_card.dart';
 import 'custom_book_card.dart';
 
 class BestSellerBookCard extends StatelessWidget {
-  const BestSellerBookCard({super.key});
+      final String imageUrl;
+
+  const BestSellerBookCard({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,7 @@ class BestSellerBookCard extends StatelessWidget {
         child: Row(
           children: [
             CustomBookCard(
+              imageUrl: 'https://georgerrmartin.com/notablog/wp-content/uploads/2024/07/agameofthrones_2024_tr_repackage-678x1024.jpg',
               horizontalPadding: 0,
               aspectRatio: 2.6 / 4,
               borderCircularRadius: 8,

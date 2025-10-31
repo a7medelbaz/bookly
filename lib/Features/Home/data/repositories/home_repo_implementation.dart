@@ -33,7 +33,6 @@ class HomeRepoImplementation implements HomeRepo {
     try {
       List<dynamic> listOfYourBooks = await apiService.get(
         endPoint: endPoint,
-        token: MyUrlConstants.myBookToken,
       );
       return right(
         listOfYourBooks
