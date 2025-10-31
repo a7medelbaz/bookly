@@ -24,7 +24,7 @@ class ApiService {
         options: Options(headers: headers),
       );
       if (response.statusCode == 200) {
-        return response.data;
+        return response.data['items'];
       } else {
         throw Exception("GET request error: ${response.statusCode}");
       }

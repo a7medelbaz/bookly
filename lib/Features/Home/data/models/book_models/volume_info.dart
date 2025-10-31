@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import 'dimensions.dart';
 import 'image_links.dart';
 import 'industry_identifier.dart';
@@ -55,7 +54,7 @@ class VolumeInfo extends Equatable {
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
     title: json['title'] as String?,
-    authors: json['authors'] as List<String>?,
+    authors: (json['authors'] as List<dynamic>).cast<String>(),
     publisher: json['publisher'] as String?,
     publishedDate: json['publishedDate'] as String?,
     description: json['description'] as String?,
@@ -75,7 +74,7 @@ class VolumeInfo extends Equatable {
         ? null
         : Dimensions.fromJson(json['dimensions'] as Map<String, dynamic>),
     printType: json['printType'] as String?,
-    categories: json['categories'] as List<String>?,
+    categories: (json['categories'] as List<dynamic>?)?.cast<String>(),
     maturityRating: json['maturityRating'] as String?,
     allowAnonLogging: json['allowAnonLogging'] as bool?,
     contentVersion: json['contentVersion'] as String?,
