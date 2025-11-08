@@ -1,9 +1,11 @@
+import 'package:bookly/Features/Home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/styles.dart';
 
 class BookPriceAndRating extends StatelessWidget {
-  const BookPriceAndRating({super.key});
+  final BookModel bookModel;
+  const BookPriceAndRating({super.key, required this.bookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +16,12 @@ class BookPriceAndRating extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.star_rounded, color: Colors.yellow, size: 18),
-            Text('4.8', style: MyStyles.textStyle16),
+            Text(bookModel.volumeInfo!.averageRating.toString(), style: MyStyles.textStyle16),
             SizedBox(width: 9),
-            Text('(9999)', style: MyStyles.textStyle14),
+            Text(
+              bookModel.volumeInfo!.ratingsCount.toString(),
+              style: MyStyles.textStyle14,
+            ),
           ],
         ),
       ],

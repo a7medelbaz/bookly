@@ -33,7 +33,7 @@ abstract class MyUrlConstants {
   static const myBookToken =
       'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc1ODgzOTUxOH0.jq8WsHDLqfTBgNWYTMmAU1U4qk_zuvm8yqfZaeaM-n0';
   static const bestSellerEndPoint =
-      'q=subject:general&filtering=free-ebooks&sorting-newest';
+      'q=subject:history&filtering=free-ebooks&sorting-newest';
   static const generalBooksEndPoint =
-      'q=subject:programming>&filtering=free-ebooks&sorting-newest';
+      'q=subject:novels>&filtering=free-ebooks';
 }

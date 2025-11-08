@@ -17,7 +17,7 @@ class BestSellerBookSilverListBuilder extends StatelessWidget {
       builder: (context, state) {
         if (state is BestSellerBooksSuccess) {
           return SliverList(
-            delegate: SliverChildBuilderDelegate(childCount: 2, (
+            delegate: SliverChildBuilderDelegate(childCount: 10, (
               context,
               index,
             ) {
